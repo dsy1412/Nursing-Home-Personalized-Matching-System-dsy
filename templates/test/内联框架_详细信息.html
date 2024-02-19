@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>养老院</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_3173475_vmruuve450h.css">
+    <link rel="stylesheet" href="./static/assets/css/style.css">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+</head>
+<style>
+    .i{
+        overflow: hidden;
+        border: none;
+        margin-top: -500px;
+        margin-left: 15%;
+    }
+    h4{
+      text-align: center;
+    }
+</style>
+<body scroll="no">
+    <!-- 抬头 -->
+        <header class="sticky-top" id="header">
+            <div class="container">
+        
+              <div class="logo float-left">
+                <h1 class="text-light"><a href="temp.html"><span>阳光养老网</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="temp.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+              </div>
+        
+              <nav class="nav-menu float-right d-none d-lg-block"><ul>
+          <li class="active"><a href="#header">首页 <i class="la la-angle-down"></i></a></li>
+          <li><a href="/yaolaoyuan">养老院配置信息</a></li>
+          <li><a href="/pingfen">查看个人信息</a></li>
+          <li><a href="#portfolio">用户指南</a></li>
+          <li><a href="#team"></a></li>
+          <li class="drop-down"><a href="">联系我们</a>
+            <ul>
+              <li><a href="#">客服代理</a></li>
+              <li class="drop-down"><a href="#">服务热线</a>
+
+              </li>
+
+            </ul>
+          </li>
+          <li><a href="#contact">关于我们</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+        
+            </div>
+        
+          </header><!-- End Header -->
+    <div class="container">
+        <div class="juzhong">
+            <br>
+            <iframe class='i' src= "{{ web }}"  width="725px" height="1200px" ></iframe>
+            <form action="{{ url_for('result4') }}" method="post">
+                <input type="radio" name="排序方式" value="{{ px_way }}" checked style="display: none">
+                <input type="radio" name="养老院名称" value="{{ name }}" checked style="display: none">
+                <input type="radio" name="用户名称" value="{{ user_name }}" checked style="display: none">
+                <input type="radio" name="用户密码" value="{{ user_key }}" checked style="display: none">
+                <input type="radio" name="姓名" value="{{ laoren_name }}" checked style="display: none">
+                <input type="radio" name="年龄" value="{{ age }}" checked style="display: none">
+                <input type="radio" name="性别" value="{{ xingbie }}" checked style="display: none">
+            <br><h4>是否收藏该养老院:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            是<input type="radio" name="是否收藏" value="是">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            否<input type="radio" name="是否收藏" value="否">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="btn btn-primary" type="submit" value="提交"></h4>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- Javascript -->
+<script src="https://m.cdn.chs.pub/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
+<script src="./src/js/Ajax.js"></script>
+<script src="./src/js/main.js"></script>
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+</html>
