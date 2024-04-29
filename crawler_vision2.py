@@ -196,7 +196,10 @@ def save_to_csv(city, data):
 #     'taiwan', 'xianggang', 'aomen'
 # ]
 provinces_pinyin = [
-    'neimenggu', 'shanxi', 'jilin', 'fujian', 'guizhou',
+    'beijing', 'shanghai', 'tianjin', 'chongqing', 'hebei', 'henan',
+    'yunnan', 'liaoning', 'heilongjiang', 'hunan', 'anhui', 'shandong',
+    'xinjiang', 'jiangsu', 'zhejiang', 'jiangxi', 'hubei', 'guangxi',
+    'gansu', 'shanxi', 'neimenggu', 'shanxi', 'jilin', 'fujian', 'guizhou',
     'guangdong', 'qinghai', 'xizang', 'sichuan', 'ningxia', 'hainan',
     'taiwan', 'xianggang', 'aomen'
 ]
