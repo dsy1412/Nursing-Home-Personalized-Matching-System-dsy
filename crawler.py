@@ -92,7 +92,6 @@ for href in href2:
     except:
         print('chucuo3')
 
-
     def init_db(dbpath):
         sql = '''
                   create table company
